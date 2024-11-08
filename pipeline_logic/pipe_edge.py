@@ -15,7 +15,7 @@ class PipeEdge:
 
     def calculate_flow_capacity(self):
         """
-        Расчет пропускной способности трубы на основе физических параметров
+        Условный Расчет пропускной способности трубы на основе физических параметров
         :return: Пропускную способность трубы
         """
         return self.diameter / self.length * (1 / self.flow_resistance)

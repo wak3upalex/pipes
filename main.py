@@ -15,4 +15,4 @@ pipeline_network.visualize_graph()
 
 # Рассчет общей пропускной способности
 total_capacity = pipeline_network.calculate_total_flow_capacity()
-print("Общая пропускная способность:", total_capacity)
+print("Условная Общая пропускная способность:", total_capacity)
