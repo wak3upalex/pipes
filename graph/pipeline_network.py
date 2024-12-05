@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import networkx as nx
 
 
@@ -24,7 +25,6 @@ class PipelineNetwork:
         """
         Метод для отображения графа
         """
-        import matplotlib.pyplot as plt
         pos = nx.spring_layout(self.graph)
         nx.draw(self.graph, pos, with_labels=True, node_size=500, node_color="lightblue")
         edge_labels = {(edge.start_node, edge.end_node): edge.diameter for edge in self.pipeline_system.get_edges()}
