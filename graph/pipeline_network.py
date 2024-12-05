@@ -31,12 +31,3 @@ class PipelineNetwork:
         nx.draw_networkx_edge_labels(self.graph, pos, edge_labels=edge_labels)
         plt.show()
 
-    def calculate_total_flow_capacity(self):
-        """
-        Метод для рассчета общей пропускной способности сети
-        :rtype: object
-        """
-        total_capacity = 0
-        for edge in self.pipeline_system.get_edges():
-            total_capacity += edge.calculate_flow_capacity()
-        return total_capacity

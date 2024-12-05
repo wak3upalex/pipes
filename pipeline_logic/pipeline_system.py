@@ -25,6 +25,16 @@ class PipelineSystem:
     def get_edges(self):
         return self.edges
 
+    def calculate_total_flow_capacity(self):
+        """
+        Метод для рассчета общей пропускной способности сети
+        :rtype: object
+        """
+        total_capacity = 0
+        for edge in self.edges:
+            total_capacity += edge.calculate_flow_capacity()
+        return total_capacity
+
     def update_node_pressure(self, node_id, new_pressure):
         node = self.get_node(node_id)
         if node:
