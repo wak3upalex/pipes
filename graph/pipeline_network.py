@@ -3,8 +3,7 @@ import networkx as nx
 
 
 class PipelineNetwork:
-    def __init__(self, pipeline_system):
-        self.pipeline_system = pipeline_system
+    def __init__(self):
         self.graph = nx.DiGraph()  # Создаем направленный граф
 
     def build_graph(self):

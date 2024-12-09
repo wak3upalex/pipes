@@ -1,3 +1,4 @@
+from graph import PipelineNetwork
 from pipeline_logic.pipe_edge import PipeEdge
 from pipeline_logic.pipe_node import PipeNode
 
@@ -6,6 +7,7 @@ class PipelineSystem:
     def __init__(self):
         self.nodes = {}  # словарь с узлами {node_id: PipeNode}
         self.edges = []  # список с трубами [PipeEdge]
+        self.pipeline_network = PipelineNetwork()
 
     def add_node(self, node_id, pressure, gas_consumption=0):
 
